@@ -10,10 +10,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900&display=swap" rel="stylesheet">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
    <script src="./static/script.js" defer></script>
     <title>Arya Joshi</title>
 </head>
-<body>
+<body onload="addYear()">
     <header>
         <h1 id="webname">Arya Joshi</h1>
         <nav>
@@ -26,14 +27,13 @@
     <div class="main">
         <h2 id="greeting">Hi, my name is Arya </h2>
         <img src="static/photo.png" alt="your full name profile image" width="350px">
-        <p id="intro">My name is Arya, and I am an Information Systems Major at Carnegie Mellon University. 
-            I am constantly driven by my passion for technology, problem solving, and team building, which is why I decided to make my future focus on these elements. 
-            Outside of academics, I enjoy playing and listening to music, as well as watching sports.
-            This includes all genres, from classical to hip hop, UFC to basketball. 
-             I also play the tabla, an instrument I have been learning since elementary school, and has allowed me to express myself in ways other fields cannot. I love learning new things about myself, and the world around me, whether this be through picking up new hobbies or just learning from class.
-              This website showcases projects that I have worked on, my current interests, and what I look forward to. 
-              If there are any questions, or you want to reach out, don't hesitate to use the contact form!</p>
+        <p id="short-bio">My name is Arya, and I am an Information Systems Major at Carnegie Mellon University. I am constantly driven by my passion for technology, problem solving...</p>    
+        <p id="full-bio">
+    and team building, which is why I decided to make my future focus on these elements. Outside of academics, I enjoy playing and listening to music, as well as watching sports. This includes all genres, from classical to hip hop, UFC to basketball. I also play the tabla, an instrument I have been learning since elementary school, and has allowed me to express myself in ways other fields cannot. I love learning new things about myself, and the world around me, whether this be through picking up new hobbies or just learning from class. This website showcases projects that I have worked on, my current interests, and what I look forward to. If there are any questions, or you want to reach out, don't hesitate to use the contact form!
+        </p>
+        <button id="read-more">Read More</button>
+        <button id="read-less">Read Less</button>
     </div>
-    <footer>&copy; 2025 designed 🎨 and coded 👩🏻‍💻 by Arya</footer>
+    <footer id = "copyYear">&copy; designed 🎨 and coded 👩🏻‍💻 by Arya</footer>
 </body>
 </html>

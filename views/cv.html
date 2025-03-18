@@ -10,11 +10,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900&display=swap" rel="stylesheet">
-<script src="../static/script.js" defer></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script defer src="../static/script.js" ></script>
 
     <title>Arya Joshi</title>
 </head>
-<body>
+<body onload="addYear()">
     <header>
         <h1 id="webname">Arya Joshi</h1>
         <nav>
@@ -55,6 +56,6 @@
         </table>
         <a href="../static/your_resume.pdf" target="_blank">My resume (pdf)</a>
     </div>
-    <footer>&copy; 2025 designed 🎨 and coded 👩🏻‍💻 by Arya</footer>
+    <footer id = "copyYear">&copy; designed 🎨 and coded 👩🏻‍💻 by Arya</footer>
 </body>
 </html>

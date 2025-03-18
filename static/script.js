@@ -37,6 +37,7 @@ function greetingFunc() {
     let d = new Date(); 
     let h = d.getHours();
     let E = document.getElementById("greeting");
+    if (!E) return;
     if (h < 12) {
         E.innerHTML = "Hi, I'm Arya. Good morning!";
     } else if (h < 18) {
@@ -49,3 +50,45 @@ function greetingFunc() {
 }
 greetingFunc();
 
+function addYear() {
+    const year = new Date().getFullYear();
+    const footer = document.getElementById("copyYear");
+    if (footer) {
+      footer.innerHTML = `${year} &copy; designed 🎨 and coded 👩🏻‍💻 by Arya   `;
+    }
+  }
+  
+  addYear();
+  
+
+  function showList() {
+    document.getElementById('listimus').style.display = 'block';
+    document.getElementById('showButton').style.display = 'none';
+}
+
+$(document).ready(function() {
+    $('#read-more').click(function() {
+        $('#full-bio').show(); 
+        $('#read-more').hide(); 
+        $('#read-less').show();
+    });
+
+    $('#read-less').click(function() {
+        $('#full-bio').hide();
+        $('#read-more').show(); 
+        $('#read-less').hide(); 
+    });
+});
+
+function validateForm() {
+    document.getElementById("validation").style.display = "none";
+    var name = document.getElementById("name");
+    var email = document.getElementById("email");
+    var comment = document.getElementById("comment");
+    if (!name.checkValidity() || !email.checkValidity() || !comment.checkValidity()) {
+        document.getElementById("validation").innerText = "PLEASE FILL OUT THE FORM CORRECTLY!!!!!!!!";
+        document.getElementById("validation").style.display = "block";
+        return false;
+    }
+    return true; 
+}

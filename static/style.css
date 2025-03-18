@@ -36,3 +36,19 @@ form * {
     margin: auto;        
     text-align: center;  
 }
+
+#listimus {
+    display: none;
+}
+#full-bio {
+    display: none;
+}
+
+#read-less {
+    display: none;
+}
+
+#validation {
+    display: none;
+    color: red; 
+    }

@@ -10,10 +10,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="../static/script.js" defer></script>
     <title>Arya Joshi</title>
 </head>
-<body>
+<body onload="addYear()">
     <header>
         <h1 id="webname">Arya Joshi</h1>
         <nav>
@@ -25,13 +26,14 @@
     </header>
     <div class="main">
         <h2>Things I love to do for fun</h2>
-        <ul>
+        <button id="showButton" onclick="showList()">Click to see...</button>
+        <ul id="listimus">
             <li>Listening to Music</li>
             <li>Chat with Friends </li>
             <li>Playing sports</li>
             <li>Watching basketball</li>
         </ul>
     </div>
-    <footer>&copy; 2025 designed 🎨 and coded 👩🏻‍💻 by Arya</footer>
+    <footer id = "copyYear">&copy; designed 🎨 and coded 👩🏻‍💻 by Arya</footer>
 </body>
 </html>
