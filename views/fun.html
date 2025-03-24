@@ -24,15 +24,30 @@
             <a href="fun.html" class = "navigation">For Fun</a>
         </nav>
     </header>
-    <div class="main">
-        <h2>Things I love to do for fun</h2>
-        <button id="showButton" onclick="showList()">Click to see...</button>
-        <ul id="listimus">
-            <li>Listening to Music</li>
-            <li>Chat with Friends </li>
-            <li>Playing sports</li>
-            <li>Watching basketball</li>
-        </ul>
+    <div class="mainLayout">
+        <div id="item1">
+            <h2>Things I love to do for fun</h2>
+            <!-- <button id="showButton" onclick="showList()">Click to see...</button> -->
+            <ul id="listimus">
+                <li>Listening to Music</li>
+                <li>Chatting with Friends</li>
+                <li>Playing Sports</li>
+                <li>Watching Basketball</li>
+            </ul>
+        </div>
+        <div id="item2">
+            <img src="../static/funIMG.jpg" alt="Fun Image" class="funIMG">
+        </div>
+        <div id="item3">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/mUxzKVrSAjs?si=0_ixz97o7xXTvmRe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div id="item4">
+            <div class="container">
+                <h2>Need Some Advice?</h2>
+                <p id="adviceText">Click the button to get a random piece of advice!</p>
+                <button class="adviceBtn" onclick="getAdvice()">Get Advice</button>
+            </div>
+        </div>
     </div>
     <footer id = "copyYear">&copy; designed 🎨 and coded 👩🏻‍💻 by Arya</footer>
 </body>

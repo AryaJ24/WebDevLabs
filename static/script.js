@@ -48,8 +48,9 @@ function greetingFunc() {
         E.innerHTML = "Hi, I'm Arya. Good night!";
     }
 }
-greetingFunc();
-
+if (window.location.href.includes("index.html")) {
+    greetingFunc();
+}
 function addYear() {
     const year = new Date().getFullYear();
     const footer = document.getElementById("copyYear");
@@ -59,12 +60,12 @@ function addYear() {
   }
   
   addYear();
-  
 
-  function showList() {
-    document.getElementById('listimus').style.display = 'block';
-    document.getElementById('showButton').style.display = 'none';
-}
+
+//   function showList() {
+//     document.getElementById('listimus').style.display = 'block';
+//     document.getElementById('showButton').style.display = 'none';
+// }
 
 $(document).ready(function() {
     $('#read-more').click(function() {
@@ -80,15 +81,28 @@ $(document).ready(function() {
     });
 });
 
-function validateForm() {
-    document.getElementById("validation").style.display = "none";
-    var name = document.getElementById("name");
-    var email = document.getElementById("email");
-    var comment = document.getElementById("comment");
-    if (!name.checkValidity() || !email.checkValidity() || !comment.checkValidity()) {
-        document.getElementById("validation").innerText = "PLEASE FILL OUT THE FORM CORRECTLY!!!!!!!!";
-        document.getElementById("validation").style.display = "block";
-        return false;
+  // Form validation
+  function validate() {
+    // Get the input fields and validation message element by their IDs
+    var userName = document.getElementById("name");
+    var userEmail = document.getElementById("email");
+    var userText = document.getElementById("comment");
+    var msg = document.getElementById("ValidateMsg"); // Element to display validation message
+    // Check if any of the fields are invalid using checkValidity()
+    if (!userName.checkValidity() || !userEmail.checkValidity() || !userText.checkValidity()) {
+        // If any field is invalid, display an error message
+        msg.innerHTML = "Please fill out the form correctly so I can get back to you :)";
     }
-    return true; 
+ } 
+
+ function getAdvice() {
+    fetch("https://api.adviceslip.com/advice")
+        .then(response => response.json()) 
+        .then(data => {
+            document.getElementById("adviceText").innerText = `"${data.slip.advice}"`;
+        })
+        .catch(error => {
+            document.getElementById("adviceText").innerText = "Oops! Something went wrong. Try again.";
+            console.error("Error fetching advice:", error);
+        });
 }

@@ -25,20 +25,23 @@
             <a href="fun.html" class = "navigation">For Fun</a>
         </nav>
     </header>
-    <div class="main">
+    <div class="mainLayout">
+        <h2>Find Me</h2>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.310802778163!2d-79.94526098852123!3d40.446257471315725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834f2226f66b24f%3A0xa4237d1fab21f026!2sStever%20House!5e0!3m2!1sen!2sus!4v1742771271584!5m2!1sen!2sus" width="720" height="540" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
         <h2>Contact Me</h2>
-        <form onsubmit="return validateForm()" novalidate>
+        <form>
             <label for="name">Your name (required)</label>
-            <input type="text" id="name" required>
-            
+            <input type="text" name="name" id="name" required>
             <label for="email">Your email (required)</label>
-            <input type="email" id="email" required>
-            
-            <label for="comment">Your comment (required)</label>
-            <textarea id="comment" cols="30" rows="10" required></textarea>
-            <input type="submit" value="SEND">
-        </form>
-        <div id="validation">PLEASE FILL OUT THE FORM CORRECTLY!!!!!!!!</div>
+            <input type="email" name ="email" id="email">
+            <label for="comment">Your message (required)</label>
+            <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+            <input type="submit" value="Send" onclick="validate()">
+    </form>
+    <p id="ValidateMsg"></p>
+
         <table>
             <tr><th>Contact Method</th><th>Description</th></tr>
             <tr><td>Email</td><td>aryaj@andrew.cmu.edu</td></tr>
