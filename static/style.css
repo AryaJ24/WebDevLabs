@@ -28,11 +28,19 @@
 
 .navigation {
     text-decoration: none;
-    color: #2a5d9e; 
+    color: black; 
     margin-right: 15px; 
 
 }
-
+.navigation.active {
+    font-weight: bold;
+    color: darkblue; 
+    text-decoration: underline;
+  }
+  
+  .navigation:hover {
+    color: green;
+  }
 th {
     padding: 12px;
     background-color: #82cfd5; 

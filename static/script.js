@@ -22,16 +22,16 @@ if (C.length > z) {
     console.log("good job!");
 }
 
-let L1 = ["Watermelon", "Pineapple", "Pear", "Banana"];
-let L2 = ["Apple", "Banana", "Kiwi", "Orange"];
+// let L1 = ["Watermelon", "Pineapple", "Pear", "Banana"];
+// let L2 = ["Apple", "Banana", "Kiwi", "Orange"];
 
-function findTheBanana(item) {
-    if (item == "Banana") { 
-        alert("Banana Found!")
-    }
-}
-L1.forEach(findTheBanana);
-L2.forEach(findTheBanana);
+// function findTheBanana(item) {
+//     if (item == "Banana") { 
+//         alert("Banana Found!")
+//     }
+// }
+// L1.forEach(findTheBanana);
+// L2.forEach(findTheBanana);
 
 function greetingFunc() {
     let d = new Date(); 
@@ -106,3 +106,24 @@ $(document).ready(function() {
             console.error("Error fetching advice:", error);
         });
 }
+function toggle() {
+    const navLinks = document.querySelector('.nav .nav-links');
+    if (navLinks.style.display === 'block') {
+      navLinks.style.display = 'none';
+    } else {
+      navLinks.style.display = 'block';
+    }
+  }
+    document.getElementById('hamburger').addEventListener('click', toggle);
+
+    document.addEventListener("DOMContentLoaded", function() {
+        let cpath = window.location.pathname;
+        cpath = cpath.substring(cpath.lastIndexOf('/') + 1);
+                let navL = document.querySelectorAll('.nav .navigation');
+          navL.forEach(function(link) {
+          let lp = link.getAttribute("href");
+          if(lp === cpath) {
+            link.classList.add("active");
+          }
+        });
+      });
