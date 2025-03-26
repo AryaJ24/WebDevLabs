@@ -48,7 +48,9 @@
     background-color: lightpink;
     padding: 15px;
     text-align: center;
+    position: relative;
   }
+  
   .navigation.active {
     font-weight: bold;
     color: darkblue; 
@@ -126,13 +128,15 @@
     .footer {
       padding: 15px;
     }
+  
     .nav .nav-links {
       flex-direction: column;
       gap: 10px;
-      display: none; 
+      display: none;
     }
     
     #hamburger {
       display: block;
     }
-  }  
+  }
+  
